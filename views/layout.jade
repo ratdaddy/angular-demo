@@ -1,0 +1,15 @@
+doctype 5
+html(ng-app='stats')
+  head
+    title= title
+    link(rel='stylesheet', href='styles/kendo.common.min.css')
+    link(rel='stylesheet', href='styles/kendo.black.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    script(src='app/lib/angular/angular.js')
+    script(src='app/js/tab_controller.js')
+    script(src='app/js/table_controller.js')
+    script(src='js/jquery.min.js')
+    script(src='js/kendo.web.min.js')
+  body
+    block content

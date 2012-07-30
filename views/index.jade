@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  div.tabStrip(ng-controller='TabCtrl')
+    ul
+      li.k-state-active Tab One
+      li Tab Two
+    div(ng-controller='TableCtrl', url='/movies')
+      div.grid
+      button(ng-click='addMovie()') Add Movie
+      button(ng-click='getMovies()') Refresh Movies
+    div(ng-controller='TableCtrl', url='/games')
+      div.grid
+        
+
+  //
+    table
+      thead
+        tr
+          th(data-field='title') Title
+          th(data-field='year') Year
+      tbody
+        tr(ng-repeat='movie in movies')
+          td {{movie.title}}
+          td {{movie.year}}
+  
